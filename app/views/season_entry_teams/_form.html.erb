@@ -1,0 +1,22 @@
+<%= form_with(model: season_entry_team) do |form| %>
+  <% if season_entry_team.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(season_entry_team.errors.count, "error") %> prohibited this season_entry_team from being saved:</h2>
+
+      <ul>
+        <% season_entry_team.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :season_entry_id, style: "display: block" %>
+    <%= form.text_field :season_entry_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

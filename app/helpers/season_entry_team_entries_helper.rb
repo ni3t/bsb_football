@@ -1,0 +1,2 @@
+module SeasonEntryTeamEntriesHelper
+end
